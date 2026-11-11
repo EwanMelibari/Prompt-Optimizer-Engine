@@ -1,6 +1,6 @@
 # Prompt-Optimizer — Requirements Specification
 
-> **Status:** Draft v0.1
+> **Status:** Draft v0.2
 > 
 > **Rule of this document:** it answers *what* and *how well*, never *how*.
 
@@ -18,3 +18,10 @@
 | Where they write | browser / terminal |
 | Languages used | Arabic / English |
 | Sensitivity of prompt content | public |
+
+## 3. Scope & Objectives
+### 3.1 In scope (first release)
+- **UI:** The Engine can be accessed through the terminal
+- **Real-time Prompt Analysis:** The Engine analyze prompt clarity, structure, and completeness while the user writes.
+- **Prompt Enhancement:** Generate multiple optimized prompt alternatives using different enhancement strategies.
+- **Contextual Suggestions:** Provide adaptive suggestions based on the current prompt context. 
