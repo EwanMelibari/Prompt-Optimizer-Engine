@@ -4,7 +4,12 @@
 ### Requirements Analysis phase █▒▒▒▒▒▒▒▒▒ 20%
 
 ## What is Prompt-Optimizer ?
-> A real-time prompt optimizer that helps in writing better AI prompts and improves the quality of AI outputs 
+> Prompt-Optimizer is an adaptive, real-time prompt enhancement engine designed to help users construct clearer, more effective AI prompts.
+> It analyzes user intent, identifies missing requirements and potential ambiguities, and provides contextual suggestions to improve prompt quality as the user writes.
 
 ## Target Features:
-- Real-time syntax and clarity analysis for AI prompts.
+- Real-time Prompt Analysis: Analyze prompt clarity, structure, and completeness while the user writes.
+- Intent Recognition: Identify the user's underlying goal and intended outcome.
+- Contextual Suggestions: Provide adaptive suggestions based on the current prompt context.
+- Requirement Detection: Identify missing details, ambiguous instructions, and potential constraints.
+- Prompt Enhancement: Generate multiple optimized prompt alternatives using different enhancement strategies.
