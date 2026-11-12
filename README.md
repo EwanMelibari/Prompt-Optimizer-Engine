@@ -1,7 +1,7 @@
 # Prompt-Optimizer-Engine
 
 ## Status : Under construction
-### Requirements Analysis phase █▒▒▒▒▒▒▒▒▒ 20%
+### Requirements Analysis phase ⌛︎
 
 ## What is Prompt-Optimizer-Engine?
 > Prompt-Optimizer-Engine is an adaptive, real-time prompt enhancement engine designed to help users construct clearer, more effective AI prompts.
