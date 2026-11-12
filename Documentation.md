@@ -1,12 +1,14 @@
 # Prompt-Optimizer-Engine — Requirements Specification
 
-> **Status:** Draft v0.7
+> **Status:** Draft v0.8
 > 
 > **Rule of this document:** it answers *what* and *how well*, never *how*.
 
 ## 1. What is Prompt-Optimizer-Engine ?
 > Prompt-Optimizer is an adaptive, real-time prompt enhancement engine designed to help users construct clearer, more effective AI prompts.
->  It analyzes user intent, identifies missing requirements and potential ambiguities, and provides contextual suggestions to improve prompt quality as the user writes.
+> It analyzes user intent, identifies missing requirements and potential ambiguities, and provides contextual suggestions to improve prompt quality as the user writes.
+> The engine is an interface-independent prompt enhancement engine designed to operate across different user environments through dedicated integration surfaces.
+> It provides a consistent core enhancement capability regardless of the host environment.
 
 ## 2. Users & Context
 
@@ -21,7 +23,7 @@
 
 ## 3. Scope & Objectives
 ### 3.1 In scope (first release)
-- **UI:** The Engine can be accessed through the terminal
+- **UI:** The first release exposes the engine through a terminal interface (CLI). Additional integration surfaces, such as IDE extensions, browser extensions, and desktop applications, are considered future extensions.
 - **Real-time Prompt Analysis:** The Engine analyze prompt clarity, structure, and completeness while the user writes.
 - **Prompt Enhancement:** Generate multiple optimized prompt alternatives using different enhancement strategies.
 - **Contextual Suggestions:** Provide adaptive suggestions based on the current prompt context. 
@@ -79,6 +81,7 @@ Priority uses MoSCoW: **M**ust / **S**hould / **C**ould / **W**on't (this releas
 | NFR-02 | Reliability | The system shall gracefully handle underlying LLM timeouts or connection failures without crashing the terminal session. | Automatically executes retry logic upon transient failure; displays a clear "Service Unavailable" status message if retries are exhausted while keeping the input buffer intact after 3 times. | M |
 | NFR-03 | Privacy | The system shall enforce strict ephemeral data handling, retaining user inputs and operational logs solely within the active session scope. | 0 bytes of prompt data or session logs written to persistent disk storage; all memory buffers are purged immediately upon session termination. | M |
 | NFR-04 | Usability | The terminal interface shall present suggestions clearly without obstructing or interrupting the user's active typing area. | Suggestions and analysis outputs are rendered in dedicated, visually separated UI panels/boxes isolated from the active input cursor line. | S |
+| NFR-05 | Modularity & Portability | The core enhancement engine shall remain independent of any specific user interface or host environment. | The same core enhancement capabilities can be accessed through different integration surfaces without duplicating or modifying the core enhancement logic. | S |
 
 
 ### 6 Risks
