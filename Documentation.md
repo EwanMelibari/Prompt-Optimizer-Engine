@@ -1,6 +1,6 @@
 # Prompt-Optimizer-Engine — Requirements Specification
 
-> **Status:** Draft v0.6
+> **Status:** Draft v0.7
 > 
 > **Rule of this document:** it answers *what* and *how well*, never *how*.
 
@@ -38,6 +38,12 @@ Everything that is not supported or not mentioned falls under a default `general
 | Data Extraction | No |
 | Creative Writing | No |
 
+### 3.3 Future Considerations (Out of Scope for v1)
+
+The engine may support additional contextual inputs in future releases, including images, code files, and conversation context.
+
+The initial release does not require or depend on these additional input sources.
+
 
 ## 4. Functional Requirements
 
@@ -59,6 +65,8 @@ Priority uses MoSCoW: **M**ust / **S**hould / **C**ould / **W**on't (this releas
 | FR-11 | The system shall maintain short-term execution memory only and discard outdated analysis results. | 0 persistence of past prompt iterations or historical logs in local storage; state is ephemeral per session run. | C |
 | FR-12 | The system shall suppress suggestion generation until a minimum semantic input threshold is reached. | Zero optimization triggers emitted if input length is < 5 words. | M |
 | FR-13 | The system shall request further context when intent classification confidence falls below threshold. | Falls back to prompts for clarification if intent cannot be confidently resolved. | S |
+| FR-14 | The system shall accept a text-based prompt as its primary and required input, without requiring additional contextual data. | The user can complete the prompt analysis and enhancement workflow using text input alone. | M |
+
 
 ## 5. Non-Functional Requirements
 
